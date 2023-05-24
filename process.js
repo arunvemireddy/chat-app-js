@@ -17,7 +17,7 @@ function sendMessage(client) {
     let messageInput = document.getElementById('messageInput1');
     let message = messageInput.value;
     let listItem = document.createElement('li');
-    listItem.textContent = "send " + message;
+    listItem.textContent = "send : " + message;
     messageInput.value = '';
     listElement1.appendChild(listItem);
     let  msg = {
@@ -29,7 +29,7 @@ function sendMessage(client) {
 
 function c1receivedMsg(msg){
   let listItem = document.createElement('li');
-  listItem.textContent = "received " + msg;
+  listItem.textContent = "received : " + msg;
   listElement1.appendChild(listItem);
 }
 
