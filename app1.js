@@ -12,10 +12,6 @@ const server = app.listen(port, function () {
 
 const wss = new WebSocket.Server({server});
 
-let wss2;
-
-wss2 = new WebSocket('ws://localhost:3002');
-
 wss.on('connection',(ws)=>{
   ws.on('message',(message)=>{
     console.log("received message ",message.toString());
