@@ -1,9 +1,20 @@
 const express = require('express');
 const WebSocket = require('ws');
 const http = require('http');
+const path = require('path');
+
 
 const app = express();
 app.use(express.json());
+app.use(express.static('front-end'));
+
+app.get('/one', (req, res) => {
+  res.sendFile(path.join(__dirname, 'front-end/user1.html'));
+});
+
+app.get('/two', (req, res) => {
+  res.sendFile(path.join(__dirname, 'front-end/user2.html'));
+});
 
 const port = 3001;
 const server = app.listen(port, function () {
