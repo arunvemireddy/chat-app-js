@@ -1,4 +1,4 @@
-let socket1 = new WebSocket('ws://54.226.49.155/:3001');
+let socket1 = new WebSocket('ws://localhost:3001');
 
 let listElement2 = document.getElementById('chat2');
 listElement2.innerHTML = '';
